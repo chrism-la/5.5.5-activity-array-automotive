@@ -13,17 +13,17 @@ class Vehicle {
 
     start() {
         if (this.fuel > 0) {
-            return this.started = true;
+            return (this.started = true);
             console.log("engine started...!!!");
         } else {
-            return this.started = false;
+            return (this.started = false);
             console.log("engine cannot start...");
         }
     }
     accelerate() {
         if (this.started) {
             if (this.fuel > 0) {
-                console.log(this.speed += 1);
+                console.log((this.speed += 1));
                 this.fuel = this.fuel - 1;
             } else {
                 console.log("out of fuel.");
@@ -37,7 +37,7 @@ class Vehicle {
         if (this.started) {
             if (this.fuel > 0) {
                 if (this.speed > 0) {
-                    console.log(this.speed -= 1);
+                    console.log((this.speed -= 1));
                     this.fuel = this.fuel - 1;
                 } else {
                     console.log(this + " has stopped moving");
@@ -62,15 +62,9 @@ class Vehicle {
         decelerate();
     }
 
-    autoPark()
-    {
+    autoPark() {}
 
-    }
-
-    autoDrive()
-    {
-      
-    }
+    autoDrive() {}
 
     typeOfVehicle(wheels) {
         if (this.numberOfWheels == 8 && 8 == wheels) {
@@ -87,5 +81,5 @@ class Vehicle {
 
 //This exports things you want to use from this "module", more info in readme
 module.exports = {
-    Vehicle
-}
+    Vehicle,
+};
