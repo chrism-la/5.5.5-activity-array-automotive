@@ -17,7 +17,7 @@ console.log(v.make);
 
 //TO DO: Code the Car subclass here or in index.js file, i.e. class Car extends Vehicle ...
 
-class Car extends Vehicle {
+class Car extends VehicleModule.Vehicle {
     constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage);
         this.maximumPassengers = 5;
@@ -55,11 +55,11 @@ class Car extends Vehicle {
 //You can use the same instance "v" of the Vehicle class above for the base class.
 
 //Create at least two new instances of the Car class and test them here:
-let x = new VehicleModule.Vehicle(
-    "Mercedes",
-    "Coupe",
-    "2023",
-    "Black",
-    "10000"
-);
-console.log(x.make);
+
+let Mercedes = new Car("Mercedes", "Coupe", "2023", "Black", 10000);
+let Toyota = new Car("Toyota", "Sienna", 2010, "Silver", 45000);
+
+console.log(Toyota);
+console.log(Mercedes);
+Mercedes.start();
+Toyota.checkService();
